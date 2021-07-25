@@ -12,15 +12,16 @@ export class DataStorageService {
 
   constructor(private http:HttpClient) { }
 
-  createArticle(data:any){
-    return new Promise((resolve,reject)=>{
-      this.http.put(`${environment.webUrl}details.json`,data).subscribe(resolve,reject);
+  async getCourse(id:number){
+    const response:any=await this.getArticles();
+    response.map((ele:any,index:any)=>{
+      ele.id===id?(this.articlesList.next(ele)):"";
     })
   }
 
   getArticles(){
     return new Promise((resolve,reject)=>{
-      this.http.get(`${environment.webUrl}details.json`).subscribe(resolve,reject);
+      this.http.get(`${environment.webUrl}course.json`).subscribe(resolve,reject);
     })
   }
 

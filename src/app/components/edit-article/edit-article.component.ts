@@ -27,7 +27,7 @@ export class EditArticleComponent implements OnInit {
    * @returns a promise either a success or failure
    */
 
-  async addArticle(ngForm:NgForm){
+/*   async addArticle(ngForm:NgForm){
     this.articles.push(ngForm.value)
     console.log(this.articles);
     try{
@@ -40,5 +40,5 @@ export class EditArticleComponent implements OnInit {
     catch(error:any){
       console.log(error);
     }
-  }
+  } */
 }

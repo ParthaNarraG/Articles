@@ -1,0 +1,13 @@
+<div class="d-flex" *ngFor="let course of courseDetails">
+    <div>
+        <app-side-nav></app-side-nav>
+    </div>
+    <div class="description">
+        <div class="container">
+            <div class="col-12">
+                <h1>{{course.name}}</h1>
+                <div [innerHTML]="course.description"></div>
+            </div>
+        </div>
+    </div>
+</div>

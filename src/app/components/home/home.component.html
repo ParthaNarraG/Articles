@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 col-md-6 my-2" *ngFor="let course of courseList">
+                <div class="course-card" (click)="onCourseClick(course)">
+                    <img src={{course.imageUrl}}>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
