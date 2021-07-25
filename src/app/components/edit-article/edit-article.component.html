@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center align-items-center h-100 w-100">
+    <form (ngSubmit)="addArticle(ngForm)" #ngForm="ngForm">
+        <label>Add Title:</label>
+        <input type="text" class="form-control" ngModel name="name">
+        <label>Add Desc:</label>
+        <input type="text" class="form-control" ngModel name="desc">
+        <label>Add Image:</label>
+        <input type="text" class="form-control" ngModel name="background_image">
+        <label>Redirect To:</label>
+        <input type="text" class="form-control" ngModel name="redirectTo">
+        <div class="pt-5">
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </div>
+    </form>
+</div>

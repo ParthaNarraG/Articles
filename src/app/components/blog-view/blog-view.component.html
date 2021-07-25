@@ -1,0 +1,30 @@
+<!-- <a href={{details.redirectTo}}>
+    <div class="cardView py-5">
+        <div class="container">
+            <h2>{{details.name}}</h2>
+            <div class="my-2">
+                <span class="fontChange">{{details.desc}}</span>
+            </div>
+            <div class="col-xs-12">
+                <img *ngIf="details.background_image" src={{details.background_image}} alt=""
+                    class="img-responsive h-100">
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <button class="read-article">Read Article</button>
+            </div>
+        </div>
+    </div>
+</a> -->
+<a href={{details.redirectTo}}>
+    <div class="col-xs-12">
+        <div class="container">
+            <div class="img-card">
+                <img *ngIf="details.background_image" src={{details.background_image}} class="img-card-image">
+            </div>
+            <h2 class="mt-2">{{details.name}}</h2>
+            <div class="mt-2">
+                <span class="fontChange">{{details.desc}}</span>
+            </div>
+        </div>
+    </div>
+</a>

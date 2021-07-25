@@ -1,0 +1,110 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+$teak: #323a45;
+$codGray: #0d0d0d;
+$primary: #002680;
+$tabBackground: rgba(63, 81, 181, 0.61);
+
+.centeredItem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: $teak;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: $teak;
+  .blog-wrapper {
+    width: 100%;
+    height: 100%;
+    .columnsSeparator{
+        padding: 15px 0;
+    }
+  }
+}
+
+//header component
+
+a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: #f6f6f6;
+  span{
+    color: $teak;               
+  }
+}
+
+//blog-view component
+.cardView {
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 330ms ease-in-out;
+  animation: fadeInLeft 1.5s backwards;
+  .img-responsive {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+  h2,
+  span,
+  p {
+    color: $primary;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+  span {
+    font-weight: 500;
+  }
+}
+
+.cardView:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.read-article {
+  border: 2px solid $primary;
+  padding: 10px;
+  color: $codGray;
+  background-color: #fff;
+}
